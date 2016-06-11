@@ -1,0 +1,29 @@
+{
+	"name": "{{vendor}}/{{package}}",
+	"description": "{{description}}",
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Inpsyde GmbH",
+			"homepage": "http://inpsyde.com/",
+			"email": "hallo@inpsyde.com",
+			"role": "Company"
+		},
+		{
+			"name": "{{author}}",
+			"email": "{{email}}",
+			"role": "Developer"
+		}
+    ],
+	"require": {
+	},
+	"require-dev": {
+	},
+	"autoload": {
+		"psr-4": {
+			"{{PackagePC}}\\": "src/"
+		}
+	}
+}
