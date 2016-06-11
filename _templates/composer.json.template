@@ -4,6 +4,7 @@
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"license": "MIT",
+	"type": "{{type}}",
 	"authors": [
 		{
 			"name": "Inpsyde GmbH",
@@ -23,7 +24,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"{{PackagePC}}\\": "src/"
+			"{{namespace}}\\": "src/"
 		}
 	}
 }

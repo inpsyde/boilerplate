@@ -88,6 +88,27 @@ $placeholders = [
 			return Scripts\SetupHelper::getLowerCase( $placeholders[ 'PackagePC' ][ 'value' ] );
 		},
 	],
+	'type' => [
+		'name'        => 'Package type',
+		'description' => 'The composer type of the package (library, wordpress-plugin, wordpress-theme, project)',
+		'validation'  =>  function ( $placeholder ) {
+
+			return Scripts\Validation::validateLowerCase( $placeholder );
+		},
+		'default'     => 'library'
+	],
+	'namespace'     => [
+		'name'        => 'Package base namespace',
+		'description' => 'The base PHP namespace of the package.',
+		'validation'  => function ( $placeholder ) {
+
+			return Scripts\Validation::validateLowerCase( $placeholder );
+		},
+		'default'     => function ( $placeholders ) {
+
+			return Scripts\SetupHelper::getLowerCase( $placeholders[ 'PackagePC' ][ 'value' ] );
+		},
+	],
 	'description' => [
 		'name'        => 'Package description',
 		'description' => 'The package description in one sentence.',
