@@ -1,6 +1,14 @@
 # Inpsyde Boilerplate
 
+**Work in progress**
+
 Boilerplate for various WordPress projects (themes, plugins, libraries).
+
+## Usage
+
+```BASH
+$ composer create-project inpsyde/boilerplate <directory>
+```
 
 ## Acknowledgment
 
