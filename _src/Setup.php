@@ -4,7 +4,7 @@ namespace InpsydeBoilerplate;
 
 use
 	BrightNucleus\Boilerplate\Scripts,
-	BrightNucleus\Boilerplate\Scripts\Task,
+	BrightNucleus\Boilerplate\Scripts\Task as OriginTask,
 	BrightNucleus\Config,
 	Composer\Script;
 
@@ -34,19 +34,19 @@ class Setup extends Scripts\Setup {
 	protected static function getSetupTasks( Script\Event $event ) {
 
 		return [
-			Task\AskAboutProjectParameters::class,
-			Task\VerifyProjectParameters::class,
-			//Task\RemoveExistingRootFiles::class,
-			Task\ReplacePlaceholdersInTemplateFiles::class,
-			Task\MoveTemplateFilesToRootFolder::class,
-			//Task\RemoveConfigFolder::class,
-			//Task\RemoveTemplatesFolder::class,
-			//Task\RemoveOriginalVCSData::class,
-			//Task\InitializeVCS::class,
+			OriginTask\AskAboutProjectParameters::class,
+			OriginTask\VerifyProjectParameters::class,
+			//OriginTask\RemoveExistingRootFiles::class,
+			OriginTask\ReplacePlaceholdersInTemplateFiles::class,
+			Task\MoveTemplateFiles::class,
+			//OriginTask\RemoveConfigFolder::class,
+			//OriginTask\RemoveTemplatesFolder::class,
+			//OriginTask\RemoveOriginalVCSData::class,
+			//OriginTask\InitializeVCS::class,
 
 			// Removing the vendor folder also removes the autoloader,
 			// so this task needs to run last.
-			//Task\RemoveVendorFolder::class,
+			//OriginTask\RemoveVendorFolder::class,
 		];
 	}
 
