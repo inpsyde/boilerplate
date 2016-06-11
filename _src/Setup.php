@@ -36,17 +36,17 @@ class Setup extends Scripts\Setup {
 		return [
 			OriginTask\AskAboutProjectParameters::class,
 			OriginTask\VerifyProjectParameters::class,
-			//OriginTask\RemoveExistingRootFiles::class,
+			OriginTask\RemoveExistingRootFiles::class,
 			OriginTask\ReplacePlaceholdersInTemplateFiles::class,
 			Task\MoveTemplateFiles::class,
-			//OriginTask\RemoveConfigFolder::class,
-			//OriginTask\RemoveTemplatesFolder::class,
-			//OriginTask\RemoveOriginalVCSData::class,
-			//OriginTask\InitializeVCS::class,
+			OriginTask\RemoveConfigFolder::class,
+			OriginTask\RemoveTemplatesFolder::class,
+			OriginTask\RemoveOriginalVCSData::class,
+			OriginTask\InitializeVCS::class,
 
 			// Removing the vendor folder also removes the autoloader,
 			// so this task needs to run last.
-			//OriginTask\RemoveVendorFolder::class,
+			OriginTask\RemoveVendorFolder::class,
 		];
 	}
 
