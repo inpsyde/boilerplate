@@ -102,11 +102,11 @@ $placeholders = [
 		'description' => 'The base PHP namespace of the package.',
 		'validation'  => function ( $placeholder ) {
 
-			return Scripts\Validation::validateLowerCase( $placeholder );
+			return Scripts\Validation::validatePascalCase( $placeholder );
 		},
 		'default'     => function ( $placeholders ) {
 
-			return Scripts\SetupHelper::getLowerCase( $placeholders[ 'PackagePC' ][ 'value' ] );
+			return Scripts\SetupHelper::getPascalCase( $placeholders[ 'PackagePC' ][ 'value' ] );
 		},
 	],
 	'description' => [
