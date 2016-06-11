@@ -29,7 +29,7 @@
 	"extra": {
 		"brightnucleus-boilerplate": {
 			"config-file": "_config/defaults.php",
-			"config-prefix": "BrightNucleus/Boilerplate"
+			"config-prefix": "Inpsyde/Boilerplate"
 		}
 	},
 	"scripts": {
