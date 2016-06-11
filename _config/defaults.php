@@ -171,6 +171,7 @@ return [
 			'Folders'           => $folders,
 			'Placeholders'      => $placeholders,
 			'TemplateExtension' => '.template',
+			'BaseDir'           => $base_dir
 		],
 	],
 ];
