@@ -14,9 +14,7 @@ use
 class MoveTemplateFiles extends Task\MoveTemplateFilesToRootFolder {
 
 	/**
-	 * Get the target path for a rendered file from a template file.
-	 *
-	 * @since 0.1.0
+	 * Override the default getTargetPath() as it relies on __DIR__
 	 *
 	 * @param string $pathname The path and file name to the template file.
 	 *
@@ -27,9 +25,9 @@ class MoveTemplateFiles extends Task\MoveTemplateFilesToRootFolder {
 		$filesystem      = new Util\Filesystem();
 		$templatesFolder = $this->getConfigKey( 'Folders', 'templates' );
 		$folderDiff      = '/' . $filesystem->findShortestPath(
-				$this->getConfigKey( 'BaseDir' ),
-				$templatesFolder
-			);
+			$this->getConfigKey( 'BaseDir' ),
+			$templatesFolder
+		);
 
 		return (string) $this->removeTemplateExtension( str_replace( $folderDiff, '', $pathname ) );
 	}
