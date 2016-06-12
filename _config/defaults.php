@@ -136,7 +136,7 @@ $placeholders = [
 	],
 	'url'         => [
 		'name'        => 'Author URL',
-		'description' => 'The website of the author or the package.',
+		'description' => 'The website of the author of the package.',
 		'validation'  => function ( $placeholder ) {
 
 			return Validation::validateURL( $placeholder );
