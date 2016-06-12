@@ -4,7 +4,8 @@ namespace InpsydeBoilerplate\Task;
 
 use
 	BrightNucleus\Boilerplate\Scripts\Task,
-	Composer\Util;
+	Composer\Util,
+	Symfony\Component\Finder;
 
 /**
  * Class MoveTemplateFiles
@@ -12,6 +13,26 @@ use
  * @package InpsydeBoilerplate\Task
  */
 class MoveTemplateFiles extends Task\MoveTemplateFilesToRootFolder {
+
+	/**
+	 * Override the default task due to find DotFiles (.gitignore)
+	 */
+	public function complete() {
+
+		$filesystem      = new Util\Filesystem();
+		$templatesFolder = $this->getConfigKey( 'Folders', 'templates' );
+		$finder          = new Finder\Finder();
+		$found           = $finder
+			->files()
+			->ignoreDotFiles( FALSE )
+			->in( $templatesFolder );
+		foreach ( $found as $file ) {
+			$from = $file->getPathname();
+			$to   = $this->getTargetPath( $from );
+			$filesystem->ensureDirectoryExists( dirname( $to ) );
+			$filesystem->copyThenRemove( $from, $to );
+		}
+	}
 
 	/**
 	 * Override the default getTargetPath() as it relies on __DIR__
@@ -31,5 +52,4 @@ class MoveTemplateFiles extends Task\MoveTemplateFilesToRootFolder {
 
 		return (string) $this->removeTemplateExtension( str_replace( $folderDiff, '', $pathname ) );
 	}
-
 }
