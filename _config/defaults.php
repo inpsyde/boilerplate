@@ -133,15 +133,6 @@ $placeholders = [
 			return Validation::validateEmail( $placeholder );
 		},
 		'default'     => 'hallo@inpsyde.com',
-	],
-	'url'         => [
-		'name'        => 'Author URL',
-		'description' => 'The website of the author of the package.',
-		'validation'  => function ( $placeholder ) {
-
-			return Validation::validateURL( $placeholder );
-		},
-		'default'     => 'http://inpsyde.com/',
 	]
 	/**
 	 * Note: the 'year' parameter is declared in Task\DeclareDate
