@@ -3,7 +3,7 @@
 	"description": "{{description}}",
 	"minimum-stability": "dev",
 	"prefer-stable": true,
-	"license": "MIT",
+	"license": "{{license}}",
 	"type": "{{type}}",
 	"authors": [
 		{
@@ -17,14 +17,14 @@
 			"email": "{{email}}",
 			"role": "Developer"
 		}
-    ],
+	],
 	"require": {
 	},
 	"require-dev": {
 	},
 	"autoload": {
 		"psr-4": {
-			"{{namespace}}\\": "src/"
+			"{{namespace_autoload}}\\": "src/"
 		}
 	}
 }

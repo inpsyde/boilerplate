@@ -20,85 +20,63 @@ $folders = [
 $placeholders = [
 	'Vendor'      => [
 		'name'        => 'Vendor name',
-		'description' => "The vendor name of the package (probably your company's name).",
+		'description' => "Human readable vendor name (probably your company's name)",
 		'validation'  => function ( $placeholder ) {
 
 			return Validation::validateTrimmed( $placeholder );
 		},
 		'default'     => 'Inpsyde',
 	],
-	'VendorPC'    => [
-		'name'        => 'Vendor name in PascalCase',
-		'description' => 'The vendor name of the package in "PascalCase" (no spaces, each word starting with a capital).',
-		'validation'  => function ( $placeholder ) {
-
-			return Validation::validatePascalCase( $placeholder );
-		},
-		'default'     => function ( $placeholders ) {
-
-			return SetupHelper::getPascalCase( $placeholders[ 'Vendor' ][ 'value' ] );
-		},
-	],
 	'vendor'      => [
 		'name'        => 'Vendor name in lowercase',
-		'description' => 'The vendor name of the package in "lowercase" (no spaces, each word starting with a lower case letter).',
+		'description' => 'Used in composer package name (no spaces, [a-z0-9-] )',
 		'validation'  => function ( $placeholder ) {
 
 			return Validation::validateLowerCase( $placeholder );
 		},
 		'default'     => function ( $placeholders ) {
 
-			return SetupHelper::getLowerCase( $placeholders[ 'VendorPC' ][ 'value' ] );
+			return SetupHelper::getLowerCase( $placeholders[ 'Vendor' ][ 'value' ] );
 		},
 	],
 	'Package'     => [
 		'name'        => 'Package name',
-		'description' => 'The name of the package.',
+		'description' => 'Human readable package name',
 		'validation'  => function ( $placeholder ) {
 
 			return Validation::validateTrimmed( $placeholder );
 		},
-		'default'     => 'Package Name',
-	],
-	'PackagePC'   => [
-		'name'        => 'Package name in PascalCase',
-		'description' => 'The package name of the package in "PascalCase" (no spaces, each word starting with a capital).',
-		'validation'  => function ( $placeholder ) {
-
-			return Validation::validatePascalCase( $placeholder );
-		},
-		'default'     => function ( $placeholders ) {
-
-			return SetupHelper::getPascalCase( $placeholders[ 'Package' ][ 'value' ] );
-		},
+		'default'     => 'Awesome Package',
 	],
 	'package'     => [
 		'name'        => 'Package name in lowercase',
-		'description' => 'The package name of the package in "lowercase" (no spaces, each word starting with a lower case letter).',
+		'description' => 'Used for the composer package name (no spaces, [a-z0-9-] )',
 		'validation'  => function ( $placeholder ) {
 
 			return Validation::validateLowerCase( $placeholder );
 		},
 		'default'     => function ( $placeholders ) {
 
-			return SetupHelper::getLowerCase( $placeholders[ 'PackagePC' ][ 'value' ] );
+			return SetupHelper::getLowerCase( $placeholders[ 'Package' ][ 'value' ] );
 		},
 	],
 	'license' => [
 		'name'        => 'License',
-		'description' => 'License abbreviation (MIT,GPL)',
+		'description' => 'License abbreviation [MIT|GPL]',
 		'validation'  => function ( $placeholder ) {
 
-			return Validation::validateLowerCase( $placeholder );
+			return SetupHelper::getSPDXLicense(
+				Validation::validateLicenseAbbr( $placeholder )
+			);
 		},
 		'default'     => 'MIT',
 	],
 	'type' => [
 		'name'        => 'Package type',
-		'description' => 'The composer type of the package (library, wordpress-plugin, wordpress-theme, project)',
+		'description' => 'The composer type of the package (library, wordpress-plugin, wordpress-theme or project)',
 		'validation'  =>  function ( $placeholder ) {
 
-			return Validation::validateLowerCase( $placeholder );
+			return Validation::validatePackageType( $placeholder );
 		},
 		'default'     => 'library'
 	],
@@ -111,38 +89,38 @@ $placeholders = [
 		},
 		'default'     => function ( $placeholders ) {
 
-			return SetupHelper::getPascalCase( $placeholders[ 'PackagePC' ][ 'value' ] );
+			return SetupHelper::getPascalCase( $placeholders[ 'Package' ][ 'value' ] );
 		},
 	],
 	'textdomain'     => [
 		'name'        => 'Textdomain',
-		'description' => 'Texdomain used for translation in gettext functions',
+		'description' => 'Used for translation in gettext functions',
 		'validation'  => function ( $placeholder ) {
 
 			return Validation::validateLowerCase( $placeholder );
 		},
 		'default'     => function ( $placeholders ) {
 
-			return SetupHelper::getLowerCase( $placeholders[ 'Package' ][ 'value' ] );
+			return $placeholders[ 'package' ][ 'value' ];
 		},
 	],
 	'description' => [
 		'name'        => 'Package description',
-		'description' => 'The package description in one sentence.',
+		'description' => 'The package description in one sentence',
 		'validation'  => function ( $placeholder ) {
 
 			return Validation::validateTrimmed( $placeholder );
 		},
-		'default'     => 'TODO: Describe what this package is all about.',
+		'default'     => 'TODO: Describe what this package is all about',
 	],
 	'author'      => [
 		'name'        => 'Author name',
-		'description' => 'The name of the author of the package.',
+		'description' => 'The name of the author (in person) of the package',
 		'validation'  => function ( $placeholder ) {
 
 			return Validation::validateTrimmed( $placeholder );
 		},
-		'default'     => 'Inpsyde GmbH',
+		'default'     => 'Jane Doe',
 	],
 	'email'       => [
 		'name'        => 'Author email',
