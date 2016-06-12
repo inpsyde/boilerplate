@@ -97,7 +97,7 @@ $placeholders = [
 		},
 		'default'     => 'library'
 	],
-	'namespace'     => [
+	'Namespace'     => [
 		'name'        => 'Package base namespace',
 		'description' => 'The base PHP namespace of the package.',
 		'validation'  => function ( $placeholder ) {
