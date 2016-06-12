@@ -1,10 +1,6 @@
 <?php # -*- coding: utf-8 -*-
 
 namespace InpsydeBoilerplate;
-
-use
-	BrightNucleus\Boilerplate\Scripts;
-
 $base_dir = dirname( __DIR__ );
 
 /*
@@ -27,7 +23,7 @@ $placeholders = [
 		'description' => "The vendor name of the package (probably your company's name).",
 		'validation'  => function ( $placeholder ) {
 
-			return Scripts\Validation::validateTrimmed( $placeholder );
+			return Validation::validateTrimmed( $placeholder );
 		},
 		'default'     => 'Inpsyde',
 	],
@@ -36,11 +32,11 @@ $placeholders = [
 		'description' => 'The vendor name of the package in "PascalCase" (no spaces, each word starting with a capital).',
 		'validation'  => function ( $placeholder ) {
 
-			return Scripts\Validation::validatePascalCase( $placeholder );
+			return Validation::validatePascalCase( $placeholder );
 		},
 		'default'     => function ( $placeholders ) {
 
-			return Scripts\SetupHelper::getPascalCase( $placeholders[ 'Vendor' ][ 'value' ] );
+			return SetupHelper::getPascalCase( $placeholders[ 'Vendor' ][ 'value' ] );
 		},
 	],
 	'vendor'      => [
@@ -48,11 +44,11 @@ $placeholders = [
 		'description' => 'The vendor name of the package in "lowercase" (no spaces, each word starting with a lower case letter).',
 		'validation'  => function ( $placeholder ) {
 
-			return Scripts\Validation::validateLowerCase( $placeholder );
+			return Validation::validateLowerCase( $placeholder );
 		},
 		'default'     => function ( $placeholders ) {
 
-			return Scripts\SetupHelper::getLowerCase( $placeholders[ 'VendorPC' ][ 'value' ] );
+			return SetupHelper::getLowerCase( $placeholders[ 'VendorPC' ][ 'value' ] );
 		},
 	],
 	'Package'     => [
@@ -60,7 +56,7 @@ $placeholders = [
 		'description' => 'The name of the package.',
 		'validation'  => function ( $placeholder ) {
 
-			return Scripts\Validation::validateTrimmed( $placeholder );
+			return Validation::validateTrimmed( $placeholder );
 		},
 		'default'     => 'Package Name',
 	],
@@ -69,11 +65,11 @@ $placeholders = [
 		'description' => 'The package name of the package in "PascalCase" (no spaces, each word starting with a capital).',
 		'validation'  => function ( $placeholder ) {
 
-			return Scripts\Validation::validatePascalCase( $placeholder );
+			return Validation::validatePascalCase( $placeholder );
 		},
 		'default'     => function ( $placeholders ) {
 
-			return Scripts\SetupHelper::getPascalCase( $placeholders[ 'Package' ][ 'value' ] );
+			return SetupHelper::getPascalCase( $placeholders[ 'Package' ][ 'value' ] );
 		},
 	],
 	'package'     => [
@@ -81,11 +77,11 @@ $placeholders = [
 		'description' => 'The package name of the package in "lowercase" (no spaces, each word starting with a lower case letter).',
 		'validation'  => function ( $placeholder ) {
 
-			return Scripts\Validation::validateLowerCase( $placeholder );
+			return Validation::validateLowerCase( $placeholder );
 		},
 		'default'     => function ( $placeholders ) {
 
-			return Scripts\SetupHelper::getLowerCase( $placeholders[ 'PackagePC' ][ 'value' ] );
+			return SetupHelper::getLowerCase( $placeholders[ 'PackagePC' ][ 'value' ] );
 		},
 	],
 	'license' => [
@@ -93,7 +89,7 @@ $placeholders = [
 		'description' => 'License abbreviation (MIT,GPL)',
 		'validation'  => function ( $placeholder ) {
 
-			return Scripts\Validation::validateLowerCase( $placeholder );
+			return Validation::validateLowerCase( $placeholder );
 		},
 		'default'     => 'MIT',
 	],
@@ -102,7 +98,7 @@ $placeholders = [
 		'description' => 'The composer type of the package (library, wordpress-plugin, wordpress-theme, project)',
 		'validation'  =>  function ( $placeholder ) {
 
-			return Scripts\Validation::validateLowerCase( $placeholder );
+			return Validation::validateLowerCase( $placeholder );
 		},
 		'default'     => 'library'
 	],
@@ -111,11 +107,11 @@ $placeholders = [
 		'description' => 'The base PHP namespace of the package.',
 		'validation'  => function ( $placeholder ) {
 
-			return Scripts\Validation::validatePascalCase( $placeholder );
+			return Validation::validatePascalCase( $placeholder );
 		},
 		'default'     => function ( $placeholders ) {
 
-			return Scripts\SetupHelper::getPascalCase( $placeholders[ 'PackagePC' ][ 'value' ] );
+			return SetupHelper::getPascalCase( $placeholders[ 'PackagePC' ][ 'value' ] );
 		},
 	],
 	'textdomain'     => [
@@ -123,11 +119,11 @@ $placeholders = [
 		'description' => 'Texdomain used for translation in gettext functions',
 		'validation'  => function ( $placeholder ) {
 
-			return Scripts\Validation::validateLowerCase( $placeholder );
+			return Validation::validateLowerCase( $placeholder );
 		},
 		'default'     => function ( $placeholders ) {
 
-			return Scripts\SetupHelper::getLowerCase( $placeholders[ 'Package' ][ 'value' ] );
+			return SetupHelper::getLowerCase( $placeholders[ 'Package' ][ 'value' ] );
 		},
 	],
 	'description' => [
@@ -135,7 +131,7 @@ $placeholders = [
 		'description' => 'The package description in one sentence.',
 		'validation'  => function ( $placeholder ) {
 
-			return Scripts\Validation::validateTrimmed( $placeholder );
+			return Validation::validateTrimmed( $placeholder );
 		},
 		'default'     => 'TODO: Describe what this package is all about.',
 	],
@@ -144,7 +140,7 @@ $placeholders = [
 		'description' => 'The name of the author of the package.',
 		'validation'  => function ( $placeholder ) {
 
-			return Scripts\Validation::validateTrimmed( $placeholder );
+			return Validation::validateTrimmed( $placeholder );
 		},
 		'default'     => 'Inpsyde GmbH',
 	],
@@ -153,7 +149,7 @@ $placeholders = [
 		'description' => 'The email of the author.',
 		'validation'  => function ( $placeholder ) {
 
-			return Scripts\Validation::validateEmail( $placeholder );
+			return Validation::validateEmail( $placeholder );
 		},
 		'default'     => 'hallo@inpsyde.com',
 	],
@@ -162,7 +158,7 @@ $placeholders = [
 		'description' => 'The website of the author or the package.',
 		'validation'  => function ( $placeholder ) {
 
-			return Scripts\Validation::validateURL( $placeholder );
+			return Validation::validateURL( $placeholder );
 		},
 		'default'     => 'http://inpsyde.com/',
 	],
@@ -171,7 +167,7 @@ $placeholders = [
 		'description' => 'The year for which the copyright is displayed. Can include a range of years as well.',
 		'validation'  => function ( $placeholder ) {
 
-			return Scripts\Validation::validateYear( $placeholder );
+			return Validation::validateYear( $placeholder );
 		},
 		'default'     => date( 'Y' ),
 	],
@@ -180,7 +176,7 @@ $placeholders = [
 		'description' => 'Date to be used for first change log entry.',
 		'validation'  => function ( $placeholder ) {
 
-			return Scripts\Validation::validateDate( $placeholder );
+			return Validation::validateDate( $placeholder );
 		},
 		'default'     => date( 'Y-m-d' ),
 	],
