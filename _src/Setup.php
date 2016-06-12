@@ -39,7 +39,7 @@ class Setup extends Scripts\Setup {
 			Task\FormatAutoloadNamespace::class,
 			Task\DeclareDate::class,
 			Task\VerifyProjectParameters::class,
-			OriginTask\RemoveExistingRootFiles::class,
+			Task\RemoveExistingRootFiles::class,
 			OriginTask\ReplacePlaceholdersInTemplateFiles::class,
 			Task\MoveTemplateFiles::class,
 			Task\SanitizeLicenseFiles::class,
@@ -49,11 +49,11 @@ class Setup extends Scripts\Setup {
 			OriginTask\RemoveConfigFolder::class,
 			OriginTask\RemoveTemplatesFolder::class,
 			OriginTask\RemoveOriginalVCSData::class,
-			OriginTask\InitializeVCS::class,
+			Task\InitGitRepo::class,
 
 			// Removing the vendor folder also removes the autoloader,
 			// so this task needs to run last.
-			OriginTask\RemoveVendorFolder::class,
+			OriginTask\RemoveVendorFolder::class
 		];
 	}
 
