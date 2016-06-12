@@ -28,6 +28,7 @@ class SanitizeThemeFiles extends Task\AbstractTask {
 		$fs       = new Util\Filesystem;
 		$base_dir = $this->getConfigKey( 'BaseDir' );
 
+		$this->event->getIO()->write( "Removing theme files" );
 		$fs->remove( "{$base_dir}/style.css" );
 		$fs->remove( "{$base_dir}/functions.php" );
 	}
