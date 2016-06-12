@@ -142,25 +142,10 @@ $placeholders = [
 			return Validation::validateURL( $placeholder );
 		},
 		'default'     => 'http://inpsyde.com/',
-	],
-	'year'        => [
-		'name'        => 'Copyright year',
-		'description' => 'The year for which the copyright is displayed. Can include a range of years as well.',
-		'validation'  => function ( $placeholder ) {
-
-			return Validation::validateYear( $placeholder );
-		},
-		'default'     => date( 'Y' ),
-	],
-	'date'        => [
-		'name'        => 'Date',
-		'description' => 'Date to be used for first change log entry.',
-		'validation'  => function ( $placeholder ) {
-
-			return Validation::validateDate( $placeholder );
-		},
-		'default'     => date( 'Y-m-d' ),
-	],
+	]
+	/**
+	 * Note: the 'year' parameter is declared in Task\DeclareDate
+	 */
 ];
 
 return [
