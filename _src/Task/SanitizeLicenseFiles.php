@@ -38,7 +38,7 @@ class SanitizeLicenseFiles extends Task\AbstractTask {
 		$license_file = "{$base_dir}/{$license_files[ $license ]}";
 		$fs->copyThenRemove( $license_file, "{$base_dir}/LICENSE" );
 		foreach ( $license_files as $file ) {
-			$this->event->getIO()->write(
+			$this->io->write(
 				sprintf(
 					"Removing license file %s",
 					basename( $file )

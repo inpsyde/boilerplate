@@ -35,7 +35,7 @@ class SanitizePluginFile extends Task\AbstractTask {
 			return;
 		}
 
-		$this->event->getIO()->write( "Removing plugin file" );
+		$this->io->write( "Removing plugin file" );
 		$fs->remove( $plugin_file );
 	}
 }

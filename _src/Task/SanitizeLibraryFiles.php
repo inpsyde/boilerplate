@@ -27,7 +27,7 @@ class SanitizeLibraryFiles extends Task\AbstractTask {
 
 		$base_dir = $this->getConfigKey( 'BaseDir' );
 		$fs       = new Util\Filesystem;
-		$this->event->getIO()->write( "Removing assets directories" );
+		$this->io->write( "Removing assets directories" );
 		$fs->removeDirectory( "{$base_dir}/assets" );
 		$fs->removeDirectory( "{$base_dir}/w-org-assets" );
 	}
