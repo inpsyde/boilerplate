@@ -71,3 +71,17 @@ The structure of the directory depends on the type of package you choose. For ex
 ## Acknowledgment
 
 This package is build on top of the [`brightnucleus/boilerplate`](https://github.com/brightnucleus/boilerplate) package by [Alain Schlesser](http://www.alainschlesser.com/).
+
+## Crafted by Inpsyde
+
+The team at [Inpsyde](http://inpsyde.com) is engineering the Web since 2006.
+
+## License
+
+Copyright (c) 2016 Inpsyde GmbH
+
+Good news, this plugin is free for everyone! Since it's released under the [MIT License](LICENSE) you can use it free of charge on your personal or commercial website.
+
+## Contributing
+
+All feedback / bug reports / pull requests are welcome. But keep in mind this package is used for the daily work at Inpsyde.
