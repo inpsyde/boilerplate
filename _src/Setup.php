@@ -40,6 +40,7 @@ class Setup extends Scripts\Setup {
 			OriginTask\RemoveExistingRootFiles::class,
 			OriginTask\ReplacePlaceholdersInTemplateFiles::class,
 			Task\MoveTemplateFiles::class,
+			Task\SanitizeLicenseFiles::class,
 			OriginTask\RemoveConfigFolder::class,
 			OriginTask\RemoveTemplatesFolder::class,
 			OriginTask\RemoveOriginalVCSData::class,
