@@ -6,13 +6,13 @@ This tool is based on top of [`brightnucleus/boilerplate`](https://github.com/br
 
 All you need is at least PHP 5.6 and [composer](https://getcomposer.org/) installed. 
 
-```BASH
+```
 $ composer create-project inpsyde/boilerplate <DIRECTORY>
 ```
 
 After composer has fetched some dependencies, you will get asked some question about the new package:
 
-```BASH
+```
 > InpsydeBoilerplate\Setup::run
 Now running setup tasks...
 Task Welcome
@@ -46,7 +46,7 @@ Finally the boilerplate runs some scripts to create all the files according to y
 
 After that, your directory looks like this:
 
-```BASH
+```
 $ ls -al <DIRECTORY>
 drwxrwxr-x  8 david david   320 Jun 12 17:33 ./
 drwxrwxrwt 18 root  root   2440 Jun 12 17:33 ../
