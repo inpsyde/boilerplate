@@ -36,7 +36,7 @@ $placeholders = [
 		},
 		'default'     => function ( $placeholders ) {
 
-			return SetupHelper::getLowerCase( $placeholders[ 'Vendor' ][ 'value' ] );
+			return SetupHelper::getLowerCase( $placeholders[ 'vendor' ][ 'value' ] );
 		},
 	],
 	'package' => [
@@ -57,7 +57,7 @@ $placeholders = [
 		},
 		'default'     => function ( $placeholders ) {
 
-			return SetupHelper::getLowerCase( $placeholders[ 'Package' ][ 'value' ] );
+			return SetupHelper::getLowerCase( $placeholders[ 'package' ][ 'value' ] );
 		},
 	],
 	'license' => [
@@ -89,7 +89,7 @@ $placeholders = [
 		},
 		'default'     => function ( $placeholders ) {
 
-			return SetupHelper::getPascalCase( $placeholders[ 'Package' ][ 'value' ] );
+			return SetupHelper::getPascalCase( $placeholders[ 'package' ][ 'value' ] );
 		},
 	],
 	'textdomain'     => [
@@ -101,7 +101,7 @@ $placeholders = [
 		},
 		'default'     => function ( $placeholders ) {
 
-			return $placeholders[ 'package' ][ 'value' ];
+			return $placeholders[ 'package_key' ][ 'value' ];
 		},
 	],
 	'description' => [
