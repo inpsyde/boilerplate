@@ -25,9 +25,7 @@ class FormatAutoloadNamespace extends Task\AbstractTask {
 	public function complete() {
 
 		$namespace = $this->getConfigKey( 'Placeholders', 'namespace' );
-		var_dump( $namespace[ 'value' ] );
 		$namespace_autoload = InpsydeBoilerplate\SetupHelper::getAutoloadNamespace( $namespace[ 'value' ] );
-		var_dump( $namespace_autoload );
 		$this->config[ 'Placeholders' ][ 'namespace_autoload' ] = [
 			'name'        => 'Autoload namespace',
 			'description' => 'Namespace for composer autoload configuration',
