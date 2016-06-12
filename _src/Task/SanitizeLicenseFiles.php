@@ -16,11 +16,8 @@ use
 class SanitizeLicenseFiles extends Task\AbstractTask {
 
 	/**
-	 * Complete the setup task.
-	 *
-	 * @since 0.1.0
-	 *
-	 * @return void
+	 * Renames the relevant license file to 'LICENSE' and removes
+	 * the one we don't use
 	 */
 	public function complete() {
 

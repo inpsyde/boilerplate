@@ -17,10 +17,6 @@ class FormatAutoloadNamespace extends Task\AbstractTask {
 	/**
 	 * Formats the provided namespace for usage in composer
 	 * autoloader configuration
-	 *
-	 * @since 0.1.0
-	 *
-	 * @return void
 	 */
 	public function complete() {
 

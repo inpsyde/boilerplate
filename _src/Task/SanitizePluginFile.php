@@ -15,11 +15,8 @@ use
 class SanitizePluginFile extends Task\AbstractTask {
 
 	/**
-	 * Complete the setup task.
-	 *
-	 * @since 0.1.0
-	 *
-	 * @return void
+	 * Renames the plugin file to {{package}}.php,
+	 * removes it, if the package is not of type wordpress-plugin
 	 */
 	public function complete() {
 
