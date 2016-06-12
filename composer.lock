@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "08ef5a5ff91d5d86ba36c4376cb9d06c",
-    "content-hash": "4c1a030a6d32c8c1397d19249bfad97d",
+    "hash": "6fdb79e368d822c785ad8435bda4181e",
+    "content-hash": "b947eb3bb999aacb5d57e36d1062cc94",
     "packages": [
         {
             "name": "brightnucleus/boilerplate",
@@ -1001,6 +1001,9 @@
     "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=5.5",
+        "ext-mbstring": "*"
+    },
     "platform-dev": []
 }

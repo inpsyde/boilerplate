@@ -24,6 +24,8 @@
 		}
 	},
 	"require": {
+		"php": ">=5.5",
+		"ext-mbstring": "*",
 		"brightnucleus/boilerplate": "~0.1"
 	},
 	"extra": {
