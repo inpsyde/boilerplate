@@ -21,23 +21,22 @@ class InitGitRepo extends Task\InitializeVCS {
 	 */
 	public function complete() {
 
-		$folder  = InpsydeBoilerplate\SetupHelper::getRootFolder();
-		$command = sprintf(
+		$base_dir = $this->getConfigKey( 'BaseDir' );
+		$command  = sprintf(
 			'cd %1$s && git init',
-			escapeshellarg($folder)
+			escapeshellarg( $base_dir )
 		);
 
-		exec($command, $output, $return);
+		exec( $command, $output, $return );
 
-		if (0 !== $return) {
+		if ( 0 !== $return ) {
 			throw new Exception\RuntimeException(
 				sprintf(
-					_('Could not initialize the VCS in folder "%1$s". [Exit Status: %2$d]'),
+					_( 'Could not initialize the VCS in folder "%1$s". [Exit Status: %2$d]' ),
 					$folder,
 					$return
 				)
 			);
 		}
 	}
-
 }
