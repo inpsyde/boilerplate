@@ -1,10 +1,10 @@
 <?php # -*- coding: utf-8 -*-
 
 /**
- * {{Vendor}} {{Package}}
+ * {{package}}
  *
  * Textdomain: {{textdomain}}
  * Author:     Inpsyde GmbH
  * License:    {{license}}
  */
-namespace {{Namespace}};
+namespace {{namespace}};

@@ -8,7 +8,7 @@
 	convertWarningsToExceptions="true"
 	>
 	<testsuites>
-		<testsuite name="{{Package}} php unit tests">
+		<testsuite name="{{package}} php unit tests">
 			<directory suffix="Test.php">./test/PHPUnit</directory>
 		</testsuite>
 	</testsuites>

@@ -1,5 +1,5 @@
 {
-	"name": "{{vendor}}/{{package}}",
+	"name": "{{vendor_key}}/{{package_key}}",
 	"description": "{{description}}",
 	"minimum-stability": "dev",
 	"prefer-stable": true,

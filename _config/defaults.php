@@ -18,7 +18,7 @@ $folders = [
  * Placeholder definitions.
  */
 $placeholders = [
-	'Vendor'      => [
+	'vendor' => [
 		'name'        => 'Vendor name',
 		'description' => "Human readable vendor name (probably your company's name)",
 		'validation'  => function ( $placeholder ) {
@@ -27,7 +27,7 @@ $placeholders = [
 		},
 		'default'     => 'Inpsyde',
 	],
-	'vendor'      => [
+	'vendor_key' => [
 		'name'        => 'Vendor name in lowercase',
 		'description' => 'Used in composer package name (no spaces, [a-z0-9-] )',
 		'validation'  => function ( $placeholder ) {
@@ -39,7 +39,7 @@ $placeholders = [
 			return SetupHelper::getLowerCase( $placeholders[ 'Vendor' ][ 'value' ] );
 		},
 	],
-	'Package'     => [
+	'package' => [
 		'name'        => 'Package name',
 		'description' => 'Human readable package name',
 		'validation'  => function ( $placeholder ) {
@@ -48,7 +48,7 @@ $placeholders = [
 		},
 		'default'     => 'Awesome Package',
 	],
-	'package'     => [
+	'package_key' => [
 		'name'        => 'Package name in lowercase',
 		'description' => 'Used for the composer package name (no spaces, [a-z0-9-] )',
 		'validation'  => function ( $placeholder ) {
@@ -80,7 +80,7 @@ $placeholders = [
 		},
 		'default'     => 'library'
 	],
-	'Namespace'     => [
+	'namespace'     => [
 		'name'        => 'Package base namespace',
 		'description' => 'The base PHP namespace of the package.',
 		'validation'  => function ( $placeholder ) {
