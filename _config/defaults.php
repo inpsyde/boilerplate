@@ -88,6 +88,15 @@ $placeholders = [
 			return Scripts\SetupHelper::getLowerCase( $placeholders[ 'PackagePC' ][ 'value' ] );
 		},
 	],
+	'license' => [
+		'name'        => 'License',
+		'description' => 'License abbreviation (MIT,GPL)',
+		'validation'  => function ( $placeholder ) {
+
+			return Scripts\Validation::validateLowerCase( $placeholder );
+		},
+		'default'     => 'MIT',
+	],
 	'type' => [
 		'name'        => 'Package type',
 		'description' => 'The composer type of the package (library, wordpress-plugin, wordpress-theme, project)',
