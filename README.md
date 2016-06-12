@@ -6,6 +6,8 @@ Boilerplate for various WordPress projects (themes, plugins, libraries).
 
 ## Usage
 
+This will work when the project was published on packagist, **which is not the case yet**.
+
 ```BASH
 $ composer create-project inpsyde/boilerplate <directory>
 ```
