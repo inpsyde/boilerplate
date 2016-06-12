@@ -35,6 +35,7 @@ class Setup extends Scripts\Setup {
 
 		return [
 			OriginTask\AskAboutProjectParameters::class,
+			Task\FormatAutoloadNamespace::class,
 			OriginTask\VerifyProjectParameters::class,
 			OriginTask\RemoveExistingRootFiles::class,
 			OriginTask\ReplacePlaceholdersInTemplateFiles::class,

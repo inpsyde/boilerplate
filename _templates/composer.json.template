@@ -24,7 +24,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"{{namespace_autoload}}\\": "src/"
+			"{{namespace_autoload}}": "src/"
 		}
 	}
 }

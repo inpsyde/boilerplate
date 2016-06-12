@@ -92,6 +92,9 @@ $placeholders = [
 			return SetupHelper::getPascalCase( $placeholders[ 'package' ][ 'value' ] );
 		},
 	],
+	/**
+	 * Note: 'namespace_autoload' is set in task FormatAutoloadNamespace
+	 */
 	'textdomain'     => [
 		'name'        => 'Textdomain',
 		'description' => 'Used for translation in gettext functions',
