@@ -34,6 +34,7 @@ class Setup extends Scripts\Setup {
 	protected static function getSetupTasks( Script\Event $event ) {
 
 		return [
+			Task\Welcome::class,
 			OriginTask\AskAboutProjectParameters::class,
 			Task\FormatAutoloadNamespace::class,
 			Task\DeclareDate::class,
