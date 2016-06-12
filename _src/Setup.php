@@ -43,6 +43,7 @@ class Setup extends Scripts\Setup {
 			Task\SanitizeLicenseFiles::class,
 			Task\SanitizePluginFile::class,
 			Task\SanitizeThemeFiles::class,
+			Task\SanitizeLibraryFiles::class,
 			OriginTask\RemoveConfigFolder::class,
 			OriginTask\RemoveTemplatesFolder::class,
 			OriginTask\RemoveOriginalVCSData::class,
