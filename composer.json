@@ -36,7 +36,8 @@
 	},
 	"scripts": {
 		"post-create-project-cmd": [
-			"InpsydeBoilerplate\\Setup::run"
+			"InpsydeBoilerplate\\Setup::run",
+			"rm -rf _src/ && composer update --ansi"
 		]
 	}
 }
