@@ -109,6 +109,18 @@ $placeholders = [
 			return Scripts\SetupHelper::getPascalCase( $placeholders[ 'PackagePC' ][ 'value' ] );
 		},
 	],
+	'textdomain'     => [
+		'name'        => 'Textdomain',
+		'description' => 'Texdomain used for translation in gettext functions',
+		'validation'  => function ( $placeholder ) {
+
+			return Scripts\Validation::validateLowerCase( $placeholder );
+		},
+		'default'     => function ( $placeholders ) {
+
+			return Scripts\SetupHelper::getLowerCase( $placeholders[ 'Package' ][ 'value' ] );
+		},
+	],
 	'description' => [
 		'name'        => 'Package description',
 		'description' => 'The package description in one sentence.',
