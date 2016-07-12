@@ -9,7 +9,7 @@
 	>
 	<testsuites>
 		<testsuite name="{{package}} php unit tests">
-			<directory suffix="Test.php">./test/PHPUnit</directory>
+			<directory suffix="Test.php">./tests/PHPUnit</directory>
 		</testsuite>
 	</testsuites>
 </phpunit>
