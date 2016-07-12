@@ -2,5 +2,25 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## 0.1.0
+## [Unreleased]
+
+## [0.2.0]
+
+### Added
+ * Reference to [keep a changelog](http://keepachangelog.com/) in CHANGELOG template
+ * Improve CHANGELOG.md
+
+### Fixed
+ * Wrong path to test directory in phpunit.xml template
+
+## [0.1.0]
+
 First pre-release. Implements the basic stuff.
+
+### Added
+ * Templates for WordPress themes and plugins
+ * Templates for PHP composer packages
+
+[Unreleased]: https://github.com/inpsyde/boilerplate/compare/0.2.0...master
+[0.2.0]: https://github.com/inpsyde/boilerplate/compare/0.1.0...0.2.0
+[0.1.0]: https://github.com/inpsyde/boilerplate/releases/tag/0.1.0
