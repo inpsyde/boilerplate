@@ -5,7 +5,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 
 ## [0.2.0]
-
 ### Added
  * Reference to [keep a changelog](http://keepachangelog.com/) in CHANGELOG template
  * Improve CHANGELOG.md
@@ -14,7 +13,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  * Wrong path to test directory in phpunit.xml template
 
 ## [0.1.0]
-
 First pre-release. Implements the basic stuff.
 
 ### Added
