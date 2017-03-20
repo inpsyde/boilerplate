@@ -1,30 +1,30 @@
 {
-	"name": "{{vendor_key}}/{{package_key}}",
-	"description": "{{description}}",
-	"minimum-stability": "dev",
-	"prefer-stable": true,
-	"license": "{{license}}",
-	"type": "{{type}}",
-	"authors": [
-		{
-			"name": "Inpsyde GmbH",
-			"homepage": "http://inpsyde.com/",
-			"email": "hallo@inpsyde.com",
-			"role": "Company"
-		},
-		{
-			"name": "{{author}}",
-			"email": "{{email}}",
-			"role": "Developer"
-		}
-	],
-	"require": {
-	},
-	"require-dev": {
-	},
-	"autoload": {
-		"psr-4": {
-			"{{namespace_autoload}}": "src/"
-		}
-	}
+    "name": "{{vendor_key}}/{{package_key}}",
+    "description": "{{description}}",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "license": "{{license}}",
+    "type": "{{type}}",
+    "authors": [
+        {
+            "name": "Inpsyde GmbH",
+            "homepage": "http://inpsyde.com/",
+            "email": "hallo@inpsyde.com",
+            "role": "Company"
+        },
+        {
+            "name": "{{author}}",
+            "email": "{{email}}",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "{{namespace_autoload}}": "src/"
+        }
+    }
 }
