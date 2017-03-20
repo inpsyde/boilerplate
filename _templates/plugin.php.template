@@ -9,6 +9,7 @@
  * Version:     dev-master
  * License:     {{license}}
  * Text Domain: {{textdomain}}
+ * Network:     TODO: Specify value 'true' or remove line
  */
 
 namespace {{namespace}};
