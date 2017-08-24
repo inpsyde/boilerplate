@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Added
 * Add `wordpress-muplugin` as possible package type
+* Fixed the inpsyde-site url
 
 ## [0.2.0]
 ### Added
