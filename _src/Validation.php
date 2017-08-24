@@ -66,6 +66,7 @@ class Validation extends Scripts\Validation {
 			'library',
 			'project',
 			'wordpress-plugin',
+			'wordpress-muplugin',
 			'wordpress-theme'
 		];
 

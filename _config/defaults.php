@@ -73,7 +73,7 @@ $placeholders = [
 	],
 	'type' => [
 		'name'        => 'Package type',
-		'description' => 'The composer type of the package (library, wordpress-plugin, wordpress-theme or project)',
+		'description' => 'The composer type of the package (library, wordpress-[mu]plugin, wordpress-theme or project)',
 		'validation'  =>  function ( $placeholder ) {
 
 			return Validation::validatePackageType( $placeholder );
