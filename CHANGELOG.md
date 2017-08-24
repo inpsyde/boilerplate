@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Added
 * Add `wordpress-muplugin` as possible package type
+* Add `bitbucket-pipelines.yml` and coding standards to be integrated in CI
 
 ### Fixed
 * Add the ssl typo to all the inpsyde-site urls
