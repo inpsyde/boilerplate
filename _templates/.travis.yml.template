@@ -1,0 +1,19 @@
+sudo: false
+language: php
+php:
+  - 7.1
+
+matrix:
+  fast_finish: true
+
+cache:
+  apt: true
+  directories:
+    - $HOME/.composer/cache
+    - vendor
+
+install:
+  - composer install
+
+script:
+- ./vendor/bin/phpcs ./ --standard=./phpcs.config.xml
