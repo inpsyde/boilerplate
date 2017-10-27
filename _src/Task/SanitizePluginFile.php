@@ -26,7 +26,7 @@ class SanitizePluginFile extends Task\AbstractTask {
 		$package     = $this->getConfigKey( 'Placeholders', 'package_key' )[ 'value' ];
 		$plugin_file = "{$base_dir}/plugin.php";
 
-		if ( 'wordpress-plugin' === $type ) {
+		if ( in_array( $type, [ 'wordpress-plugin', 'wordpress-muplugin' ], true ) ) {
 			$fs->copyThenRemove(
 				$plugin_file,
 				"{$base_dir}/{$package}.php"
