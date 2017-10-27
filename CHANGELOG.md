@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+* Add strict type declaration to PHP file templates. Fixes #9
+
 ### Added
 * Add `wordpress-muplugin` as possible package type
 * Add `bitbucket-pipelines.yml` and coding standards to be integrated in CI
