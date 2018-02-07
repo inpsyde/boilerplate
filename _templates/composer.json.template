@@ -30,7 +30,7 @@
     },
     "scripts": {
         "ci": [
-            "vendor/bin/phpcs",
+            "vendor/bin/phpcs"
         ]
     }
 }
