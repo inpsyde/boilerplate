@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ruleset name="Inpsde Coding Standard">
+	<rule ref="Inpsyde"/>
+	<file>./src</file>
+</ruleset>
