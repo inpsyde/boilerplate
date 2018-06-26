@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Changed
+* Apply current Inpsyde code style guide.
 * Add code coverage configuration to phpunit.xml.dist template
 * Add strict type declaration to PHP file templates. Fixes #9
 

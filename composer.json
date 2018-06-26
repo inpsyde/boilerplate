@@ -1,43 +1,43 @@
 {
-	"name": "inpsyde/boilerplate",
-	"description": "Create new package from scratch",
-	"minimum-stability": "dev",
-	"prefer-stable": true,
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "Inpsyde GmbH",
-			"email": "hallo@inpsyde.com",
-			"homepage": "https://inpsyde.com",
-			"role": "Company"
-		},
-		{
-			"name": "David Naber",
-			"email": "d.naber@inpsyde.com",
-			"homepage": "http://dnaber.de",
-			"role": "Developer"
-		}
-	],
-	"autoload": {
-		"psr-4": {
-			"InpsydeBoilerplate\\": "_src/"
-		}
-	},
-	"require": {
-		"php": ">=5.6",
-		"ext-mbstring": "*",
-		"brightnucleus/boilerplate": "~0.1"
-	},
-	"extra": {
-		"brightnucleus-boilerplate": {
-			"config-file": "_config/defaults.php",
-			"config-prefix": "Inpsyde/Boilerplate"
-		}
-	},
-	"scripts": {
-		"post-create-project-cmd": [
-			"InpsydeBoilerplate\\Setup::run",
-			"rm -rf _src/ && composer update --ansi"
-		]
-	}
+    "name": "inpsyde/boilerplate",
+    "description": "Create new package from scratch",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Inpsyde GmbH",
+            "email": "hallo@inpsyde.com",
+            "homepage": "https://inpsyde.com",
+            "role": "Company"
+        },
+        {
+            "name": "David Naber",
+            "email": "d.naber@inpsyde.com",
+            "homepage": "http://dnaber.de",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "InpsydeBoilerplate\\": "_src/"
+        }
+    },
+    "require": {
+        "php": ">=5.6",
+        "ext-mbstring": "*",
+        "brightnucleus/boilerplate": "~0.1"
+    },
+    "extra": {
+        "brightnucleus-boilerplate": {
+            "config-file": "_config/defaults.php",
+            "config-prefix": "Inpsyde/Boilerplate"
+        }
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "InpsydeBoilerplate\\Setup::run",
+            "rm -rf _src/ && composer update --ansi"
+        ]
+    }
 }

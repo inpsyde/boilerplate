@@ -2,26 +2,25 @@
 
 namespace InpsydeBoilerplate\Task;
 
-use
-	BrightNucleus\Boilerplate\Scripts\Task,
-	Composer\Util;
+use BrightNucleus\Boilerplate\Scripts\Task;
 
 /**
  * Class DeclareDate
  *
  * @package InpsydeBoilerplate\Task
  */
-class DeclareDate extends Task\AbstractTask {
+class DeclareDate extends Task\AbstractTask
+{
 
-	/**
-	 * Declares the date parameter
-	 */
-	public function complete() {
-
-		$this->config[ 'Placeholders' ][ 'year' ] = [
-			'name'  => 'Copyright year',
-			'description' => '',
-			'value' => date( 'Y' )
-		];
-	}
+    /**
+     * Declares the date parameter
+     */
+    public function complete()
+    {
+        $this->config['Placeholders']['year'] = [
+            'name' => 'Copyright year',
+            'description' => '',
+            'value' => date('Y'),
+        ];
+    }
 }

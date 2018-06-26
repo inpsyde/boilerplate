@@ -2,22 +2,22 @@
 
 namespace InpsydeBoilerplate\Task;
 
-use
-	BrightNucleus\Boilerplate\Scripts\Task;
+use BrightNucleus\Boilerplate\Scripts\Task;
 
 /**
  * Class Welcome
  *
  * @package InpsydeBoilerplate\Task
  */
-class Welcome extends Task\AbstractTask {
+class Welcome extends Task\AbstractTask
+{
 
-	/**
-	 * Pints boilerplate logo
-	 */
-	public function complete() {
-
-		$logo = <<<ASCI
+    /**
+     * Pints boilerplate logo
+     */
+    public function complete()
+    {
+        $logo = <<<ASCI
   ___                                _
  |_ _| _ __   _ __   ___  _   _   __| |  ___
   | | | '_ \ | '_ \ / __|| | | | / _` | / _ \
@@ -32,7 +32,6 @@ class Welcome extends Task\AbstractTask {
                                  |_|
 ASCI;
 
-		$this->io->write( "<info>{$logo}</info>" );
-	}
-
+        $this->io->write("<info>{$logo}</info>");
+    }
 }
