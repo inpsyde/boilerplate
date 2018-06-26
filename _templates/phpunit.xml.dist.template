@@ -7,6 +7,11 @@
 	convertNoticesToExceptions="true"
 	convertWarningsToExceptions="true"
 	>
+	<filter>
+		<whitelist processUncoveredFilesFromWhitelist="true">
+			<directory suffix=".php">./src</directory>
+		</whitelist>
+	</filter>
 	<testsuites>
 		<testsuite name="{{package}} PHP unit tests">
 			<directory suffix="Test.php">./tests/PHPUnit</directory>
