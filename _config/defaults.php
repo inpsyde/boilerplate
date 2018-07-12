@@ -118,7 +118,7 @@ $placeholders = [
         'validation' => function ($placeholder) {
             return Validation::validateEmail($placeholder);
         },
-        'default' => 'hallo@inpsyde.com',
+        'default' => 'hello@inpsyde.com',
     ]
     /**
      * Note: the 'year' parameter is declared in Task\DeclareDate
