@@ -39,7 +39,7 @@ Package base namespace [The base PHP namespace of the package.] Default: "MyNewT
 Textdomain [Used for translation in gettext functions] Default: "my-new-theme" ?
 Package description [The package description in one sentence] Default: "TODO: Describe what this package is all about" ? This is the description of my new theme
 Author name [The name of the author (in person) of the package] Default: "Jane Doe" ? David Naber
-Author email [The email of the author.] Default: "hallo@inpsyde.com" ? d.naber@inpsyde.com
+Author email [The email of the author.] Default: "hello@inpsyde.com" ? d.naber@inpsyde.com
 ```
 
 Finally the boilerplate runs some scripts to create all the files according to your inputs. At the end the sources and VCS files of the boilerplate gets deleted and a new git repository is initialized.
