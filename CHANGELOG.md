@@ -1,18 +1,22 @@
 # Change Log
 All notable changes to this project will be documented in this file.
-This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+
+## [0.2.1]
 ### Changed
-* Apply current Inpsyde code style guide.
+* Change contact email address to english version
+* Apply current Inpsyde code style guide
 * Add code coverage configuration to phpunit.xml.dist template
-* Add strict type declaration to PHP file templates. Fixes #9
+* Add strict type declaration to PHP file templates
 
 ### Added
 * Add `wordpress-muplugin` as possible package type
 * Add `bitbucket-pipelines.yml` and coding standards to be integrated in CI
 
 ### Fixed
+* Remove localization (`gettext`) function calls
 * Add the ssl typo to all the inpsyde-site urls
 
 ## [0.2.0]
@@ -30,6 +34,6 @@ First pre-release. Implements the basic stuff.
  * Templates for WordPress themes and plugins
  * Templates for PHP composer packages
 
-[Unreleased]: https://github.com/inpsyde/boilerplate/compare/0.2.0...master
+[0.2.1]: https://github.com/inpsyde/boilerplate/compare/0.2.0...0.2.1
 [0.2.0]: https://github.com/inpsyde/boilerplate/compare/0.1.0...0.2.0
 [0.1.0]: https://github.com/inpsyde/boilerplate/releases/tag/0.1.0
