@@ -32,7 +32,7 @@ class InitGitRepo extends Task\InitializeVCS
         if (0 !== $return) {
             throw new Exception\RuntimeException(
                 sprintf(
-                    _('Could not initialize the VCS in folder "%1$s". [Exit Status: %2$d]'),
+                    'Could not initialize the VCS in folder "%1$s". [Exit Status: %2$d]',
                     $folder,
                     $return
                 )
