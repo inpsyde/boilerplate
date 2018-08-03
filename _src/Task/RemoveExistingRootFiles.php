@@ -27,7 +27,7 @@ class RemoveExistingRootFiles extends Task\RemoveExistingRootFiles
             } catch (Exception $exception) {
                 $this->io->writeError(
                     sprintf(
-                        _('Could not remove file "%1$s". Reason: %2$s'),
+                        'Could not remove file "%1$s". Reason: %2$s',
                         $file,
                         $exception->getMessage()
                     )

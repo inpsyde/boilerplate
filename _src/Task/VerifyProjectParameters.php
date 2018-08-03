@@ -27,7 +27,7 @@ class VerifyProjectParameters extends Task\VerifyProjectParameters
         foreach ($this->getConfigKey('Placeholders') as $placeholder) {
             $this->io->write(
                 sprintf(
-                    _('%1$s: <info>%2$s</info>'),
+                    '%1$s: <info>%2$s</info>',
                     Formatter\OutputFormatter::escape($placeholder['name']),
                     Formatter\OutputFormatter::escape($placeholder['value'])
                 )
