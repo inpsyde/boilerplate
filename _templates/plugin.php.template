@@ -3,13 +3,14 @@ declare( strict_types = 1 );
 
 /**
  * Plugin Name: {{package}}
- * Description: {{description}}
  * Plugin URI:  TODO
+ * Description: {{description}}
+ * Version:     dev-master
  * Author:      Inpsyde GmbH
  * Author URI:  https://inpsyde.com/
- * Version:     dev-master
  * License:     {{license}}
  * Text Domain: {{textdomain}}
+ * Domain Path: /languages
  * Network:     TODO: Specify value 'true' or remove line
  */
 
