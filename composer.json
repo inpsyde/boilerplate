@@ -1,8 +1,6 @@
 {
     "name": "inpsyde/boilerplate",
     "description": "Create new package from scratch",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "license": "MIT",
     "authors": [
         {
@@ -14,15 +12,10 @@
         {
             "name": "David Naber",
             "email": "d.naber@inpsyde.com",
-            "homepage": "http://dnaber.de",
+            "homepage": "https://dnaber.de",
             "role": "Developer"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "InpsydeBoilerplate\\": "_src/"
-        }
-    },
     "require": {
         "php": ">=5.6",
         "ext-mbstring": "*",
@@ -34,6 +27,13 @@
             "config-prefix": "Inpsyde/Boilerplate"
         }
     },
+    "autoload": {
+        "psr-4": {
+            "InpsydeBoilerplate\\": "_src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "scripts": {
         "post-create-project-cmd": [
             "InpsydeBoilerplate\\Setup::run",

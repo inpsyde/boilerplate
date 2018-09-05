@@ -1,10 +1,8 @@
 {
     "name": "{{vendor_key}}/{{package_key}}",
-    "description": "{{description}}",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "license": "{{license}}",
     "type": "{{type}}",
+    "description": "{{description}}",
+    "license": "{{license}}",
     "authors": [
         {
             "name": "Inpsyde GmbH",
@@ -28,6 +26,8 @@
             "{{namespace_autoload}}": "src/"
         }
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "scripts": {
         "ci": [
             "vendor/bin/phpcs"
