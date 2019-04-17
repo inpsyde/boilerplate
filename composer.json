@@ -21,6 +21,9 @@
         "ext-mbstring": "*",
         "brightnucleus/boilerplate": "~0.1"
     },
+    "config": {
+        "sort-packages": true
+    },
     "extra": {
         "brightnucleus-boilerplate": {
             "config-file": "_config/defaults.php",
