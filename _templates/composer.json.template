@@ -21,6 +21,9 @@
     "require-dev": {
         "inpsyde/php-coding-standards": "@stable"
     },
+    "config": {
+        "sort-packages": true
+    },
     "autoload": {
         "psr-4": {
             "{{namespace_autoload}}": "src/"
