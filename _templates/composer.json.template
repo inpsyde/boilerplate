@@ -29,6 +29,11 @@
             "{{namespace_autoload}}": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "{{namespace_autoload}}Tests\\": "test/PHPUnit/"
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
