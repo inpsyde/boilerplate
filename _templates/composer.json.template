@@ -31,7 +31,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "{{namespace_autoload}}Tests\\": "test/PHPUnit/"
+            "{{namespace_autoload}}Tests\\": "tests/PHPUnit/"
         }
     },
     "minimum-stability": "dev",
