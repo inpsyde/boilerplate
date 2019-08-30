@@ -7,7 +7,7 @@ This tool is based on top of [`brightnucleus/boilerplate`](https://github.com/br
 All you need is at least PHP 5.6 and [composer](https://getcomposer.org/) installed. 
 
 ```
-$ composer create-project inpsyde/boilerplate <DIRECTORY>
+$ composer create-project inpsyde/boilerplate:@dev <DIRECTORY> "dev-plugin-guidelines"
 ```
 
 After composer has fetched some dependencies, you will get asked some question about the new package:
