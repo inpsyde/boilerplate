@@ -15,3 +15,71 @@ declare( strict_types = 1 );
  */
 
 namespace {{namespace}};
+
+use Throwable;
+
+/**
+ * Display an error message in the WP admin.
+ *
+ * @param string $message The message content
+ *
+ * @return void
+ */
+function errorNotice(string $message)
+{
+    foreach (['admin_notices', 'network_admin_notices'] as $hook) {
+        add_action(
+            $hook,
+            function () use ($message) {
+                $class = 'notice notice-error';
+                printf(
+                    '<div class="%1$s"><p>%2$s</p></div>',
+                    esc_attr($class),
+                    wp_kses_post($message)
+                );
+            }
+        );
+    }
+}
+
+/**
+ * Handle any exception that might occur during plugin setup.
+ *
+ * @param Throwable $throwable The Exception
+ *
+ * @return void
+ */
+function handleException(Throwable $throwable)
+{
+    do_action('{{vendor_key}}.{{package_key}}.critical', $throwable);
+
+    errorNotice(
+        sprintf(
+            '<strong>Error:</strong> %s <br><pre>%s</pre>',
+            $throwable->getMessage(),
+            $throwable->getTraceAsString()
+        )
+    );
+}
+
+/**
+ * Initialize all the plugin things.
+ *
+ * @throws Throwable
+ */
+function initialize()
+{
+    try {
+        if (is_readable(__DIR__.'/vendor/autoload.php')) {
+            /* @noinspection PhpIncludeInspection */
+            include_once __DIR__.'/vendor/autoload.php';
+        }
+
+        // initialize your code here...
+
+    } catch (Throwable $throwable) {
+        handleException($throwable);
+    }
+}
+
+add_action('plugins_loaded', __NAMESPACE__.'\\initialize', PHP_INT_MAX);
