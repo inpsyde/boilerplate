@@ -19,7 +19,9 @@
     "require": {
     },
     "require-dev": {
-        "inpsyde/php-coding-standards": "@stable"
+        "brain/monkey": "@stable",
+        "inpsyde/php-coding-standards": "@stable",
+        "phpunit/phpunit": "@stable"
     },
     "config": {
         "sort-packages": true
