@@ -33,9 +33,7 @@ class SetupHelper extends Scripts\SetupHelper
      */
     public static function getUnquoted($string)
     {
-        $string = trim($string,"'");
-        
-        return trim($string, '"');
+        return trim($string,'\'"');
     }
 
     /**
