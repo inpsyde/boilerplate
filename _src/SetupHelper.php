@@ -25,6 +25,18 @@ class SetupHelper extends Scripts\SetupHelper
     }
 
     /**
+     * Remove quotes and/or double-quotes enclosing the string.
+     *
+     * @param string $string String to be sanitized.
+     *
+     * @return string Converted string.
+     */
+    public static function getUnquoted($string)
+    {
+        return trim($string,'\'"');
+    }
+
+    /**
      * Return a valid license abbreviation according to SPDX recommendation
      *
      * @link https://spdx.org/licenses/

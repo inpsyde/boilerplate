@@ -94,4 +94,29 @@ class Validation extends Scripts\Validation
             "Provided namespace is invalid: '{$namespace}'"
         );
     }
+
+
+    /**
+     * Verify that a string has no unnecessary quotes or throw an Exception
+     *
+     * @since 0.1.0
+     *
+     * @param string $string The string to validate.
+     *
+     * @return string The validated string.
+     * @throws Exception\InvalidArgumentException If the string is quoted or double-quoted.
+     */
+    public static function validateUnquoted($string)
+    {
+        if (SetupHelper::getUnquoted($string) === $string) {
+            return $string;
+        }
+
+        throw new Exception\InvalidArgumentException(
+            sprintf(
+                'Provided string "%1$s" has unnecessary quotes or double-quotes.',
+                $string
+            )
+        );
+    }
 }
