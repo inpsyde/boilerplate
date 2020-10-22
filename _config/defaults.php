@@ -41,7 +41,7 @@ $placeholders = [
         'name' => 'Package name',
         'description' => 'Human readable package name',
         'validation' => function ($placeholder) {
-            return Validation::validateTrimmed($placeholder) && Validation::validateUnquoted($placeholder);
+            return Validation::validateTrimmed(Validation::validateUnquoted($placeholder));
         },
         'default' => 'Awesome Package',
     ],
