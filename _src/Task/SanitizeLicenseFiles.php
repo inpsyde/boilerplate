@@ -26,7 +26,7 @@ class SanitizeLicenseFiles extends Task\AbstractTask
         $license = $this->getConfigKey('Placeholders', 'license')['value'];
         $license_files = [
             'MIT' => 'LICENSE.mit',
-            'GPL-2.0-or-later' => 'LICENSE.gpl2',
+            'GPL-2.0' => 'LICENSE.gpl2',
         ];
 
         if (! isset($license_files[$license])) {
