@@ -9,6 +9,7 @@ declare( strict_types = 1 );
  * Author:      Inpsyde GmbH
  * Author URI:  https://inpsyde.com/
  * License:     {{license}}
+ * License URI: "./LICENSE"
  * Text Domain: {{textdomain}}
  * Domain Path: /languages
  * Network:     TODO: Specify value 'true' or remove line
