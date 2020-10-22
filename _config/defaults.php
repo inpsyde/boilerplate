@@ -65,16 +65,6 @@ $placeholders = [
         },
         'default' => 'MIT',
     ],
-    'license_slug' => [
-        'name' => 'License ('
-
-    ],
-    'license_uri' => [
-        'name' => 'License URI',
-        'description' =>
-]
-    ]
-
     'type' => [
         'name' => 'Package type',
         'description' => 'The composer type of the package (library, wordpress-[mu]plugin, wordpress-theme or project)',
