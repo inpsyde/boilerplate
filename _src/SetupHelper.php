@@ -49,7 +49,7 @@ class SetupHelper extends Scripts\SetupHelper
     {
         $licenses = [
             'mit' => 'MIT',
-            'gpl' => 'GPL-2.0 or later'
+            'gpl' => 'GPL-2.0-or-later'
         ];
 
         $license = strtolower($license);
