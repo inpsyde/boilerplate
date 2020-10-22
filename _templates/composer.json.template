@@ -6,8 +6,8 @@
     "authors": [
         {
             "name": "Inpsyde GmbH",
-            "homepage": "https://inpsyde.com/",
             "email": "hello@inpsyde.com",
+            "homepage": "https://inpsyde.com",
             "role": "Company"
         },
         {
@@ -16,8 +16,7 @@
             "role": "Developer"
         }
     ],
-    "require": {
-    },
+    "require": {},
     "require-dev": {
         "brain/monkey": "@stable",
         "inpsyde/php-coding-standards": "@stable",
