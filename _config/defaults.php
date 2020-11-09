@@ -57,13 +57,13 @@ $placeholders = [
     ],
     'license' => [
         'name' => 'License',
-        'description' => 'License abbreviation [MIT|GPL]',
+        'description' => 'License abbreviation [GPL|MIT]',
         'validation' => function ($placeholder) {
             return SetupHelper::getSPDXLicense(
                 Validation::validateLicenseAbbr($placeholder)
             );
         },
-        'default' => 'MIT',
+        'default' => 'GPL',
     ],
     'type' => [
         'name' => 'Package type',
