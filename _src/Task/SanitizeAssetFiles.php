@@ -57,12 +57,14 @@ class SanitizeAssetFiles extends Task\AbstractTask
             switch ($type) {
                 case 'wordpress-theme':
                     $fs->remove("{$baseDir}/functions.php");
+                    $fs->remove("{$baseDir}/plugin.assets.php");
                     $fs->rename("{$baseDir}/functions.assets.php", "{$baseDir}/functions.php");
                     break;
                 case 'wordpress-plugin':
                     $package = $this->getConfigKey('Placeholders', 'package_key')['value'];
 
                     $fs->remove("{$baseDir}/{$package}.php");
+                    $fs->remove("{$baseDir}/functions.php");
                     $fs->rename("{$baseDir}/plugin.assets.php", "{$baseDir}/{$package}.php");
                     break;
             }
