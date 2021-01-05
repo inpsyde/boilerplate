@@ -26,12 +26,14 @@ class SanitizeAssetFiles extends Task\AbstractTask
     {
         $useAssets = $this->getConfigKey('Placeholders', 'assets')['value'];
 
-        if ($useAssets === 'yes') {
-            return;
-        }
-
         $fs = new Util\Filesystem();
         $baseDir = $this->getConfigKey('BaseDir');
+
+        if ($useAssets === 'yes') {
+            $fs->remove("{$baseDir}/assets");
+
+            return;
+        }
 
         $this->io->write("Removing asset compiling files");
 

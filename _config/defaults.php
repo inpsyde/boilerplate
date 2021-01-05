@@ -19,14 +19,6 @@ $folders = [
  * Placeholder definitions.
  */
 $placeholders = [
-    'assets' => [
-        'name' => 'Project uses Assets',
-        'description' => 'The project uses Assets and need the compile/bundle setup, otherwise (no)',
-        'validation' => function ($placeholder) {
-            return Validation::validateChoice($placeholder);
-        },
-        'default' => 'yes',
-    ],
     'vendor' => [
         'name' => 'Vendor name',
         'description' => "Human readable vendor name (probably your company's name)",
@@ -131,6 +123,14 @@ $placeholders = [
     /**
      * Note: the 'year' parameter is declared in Task\DeclareDate
      */
+    'assets' => [
+        'name' => 'Project uses Assets',
+        'description' => 'The project uses Assets and need the compile/bundle setup, otherwise (no)',
+        'validation' => function ($placeholder) {
+            return Validation::validateChoice($placeholder);
+        },
+        'default' => 'yes',
+    ],
 ];
 
 return [
