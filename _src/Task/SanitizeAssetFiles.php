@@ -19,6 +19,9 @@ class SanitizeAssetFiles extends Task\AbstractTask
     const ASSET_FILES = [
         'resources',
         '.eslintrc',
+        'composer.assets.json',
+        'functions.assets.php',
+        'plugin.assets.json',
         'package.json',
         'postcss.config.js',
         'tsconfig.json',
@@ -47,6 +50,22 @@ class SanitizeAssetFiles extends Task\AbstractTask
 
         if ($useAssets === 'yes') {
             $fs->remove("{$baseDir}/assets");
+
+            $fs->remove("{$baseDir}/composer.json");
+            $fs->rename("{$baseDir}/composer.assets.json", "{$baseDir}/composer.json");
+
+            switch ($type) {
+                case 'wordpress-theme':
+                    $fs->remove("{$baseDir}/functions.php");
+                    $fs->rename("{$baseDir}/functions.assets.php", "{$baseDir}/functions.php");
+                    break;
+                case 'wordpress-plugin':
+                    $package = $this->getConfigKey('Placeholders', 'package_key')['value'];
+
+                    $fs->remove("{$baseDir}/{$package}.php");
+                    $fs->rename("{$baseDir}/plugin.assets.json", "{$baseDir}/{$package}.php");
+                    break;
+            }
 
             return;
         }

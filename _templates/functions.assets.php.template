@@ -1,0 +1,40 @@
+<?php # -*- coding: utf-8 -*-
+declare( strict_types = 1 );
+
+/**
+ * {{package}}
+ *
+ * Textdomain: {{textdomain}}
+ * Author:     Inpsyde GmbH
+ * License:    {{license}}
+ */
+namespace {{namespace}};
+
+/**
+ * Register custom Assets for {{package}}
+ */
+add_action(
+    'after_setup_theme',
+    static function () {
+        add_action(
+            AssetManager::ACTION_SETUP,
+            static function (AssetManager $assetManager) {
+                $webPackManifestLoader = new WebpackManifestLoader();
+
+                $assets = $webPackManifestLoader
+                    ->withDirectoryUrl(get_template_directory_uri() . '/assets/')
+                    ->load(get_template_directory() . '/assets/manifest.json');
+
+                $assets = array_map(
+                    static function ($asset) {
+                        return $asset->forLocation(ASSET::FRONTEND);
+                    },
+                    $assets
+                );
+
+                $assetManager->register(...$assets);
+            }
+        );
+    },
+    9
+);
