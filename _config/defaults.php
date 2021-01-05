@@ -25,7 +25,7 @@ $placeholders = [
         'validation' => function ($placeholder) {
             return Validation::validateChoice($placeholder);
         },
-        'default' => true,
+        'default' => 'yes',
     ],
     'vendor' => [
         'name' => 'Vendor name',
