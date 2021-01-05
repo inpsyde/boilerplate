@@ -35,7 +35,7 @@ class SanitizeAssetFiles extends Task\AbstractTask
             return;
         }
 
-        $this->io->write("Removing asset compiling files");
+        $this->io->write("Removing asset files");
 
         foreach (self::ASSET_FILES as $file) {
             $fs->remove("{$baseDir}/{$file}");
