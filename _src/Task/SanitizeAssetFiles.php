@@ -63,7 +63,7 @@ class SanitizeAssetFiles extends Task\AbstractTask
                     $package = $this->getConfigKey('Placeholders', 'package_key')['value'];
 
                     $fs->remove("{$baseDir}/{$package}.php");
-                    $fs->rename("{$baseDir}/plugin.assets.json", "{$baseDir}/{$package}.php");
+                    $fs->rename("{$baseDir}/plugin.assets.php", "{$baseDir}/{$package}.php");
                     break;
             }
 
