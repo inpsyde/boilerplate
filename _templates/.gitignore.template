@@ -1,3 +1,33 @@
-/vendor/
+### PHPUnit
 phpunit.xml
 .phpunit.result.cache
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules
+jspm_packages
+yarn.lock
+package-lock.json
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Composer
+composer.phar
+/composer.lock
+/vendor
+
+# Assets
+.sass-cache/
+*.css.map
+/assets
+
+# Compiler, see https://github.com/inpsyde/composer-asset-compiler#version-control
+/.composer_compiled_assets
