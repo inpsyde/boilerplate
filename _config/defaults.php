@@ -21,7 +21,7 @@ $folders = [
 $placeholders = [
     'assets' => [
         'name' => 'Project uses Assets',
-        'description' => 'The project needs to compile/bundle assets',
+        'description' => 'The project uses Assets and need the compile/bundle setup, otherwise (no)',
         'validation' => function ($placeholder) {
             return Validation::validateChoice($placeholder);
         },
