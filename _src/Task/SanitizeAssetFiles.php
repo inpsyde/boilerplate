@@ -39,6 +39,8 @@ class SanitizeAssetFiles extends Task\AbstractTask
 
         if (!in_array($type, self::WP_TYPES, true)) {
             $this->removeAssetsFiles($fs, $baseDir);
+
+            return;
         }
 
         $useAssets = $this->getConfigKey('Placeholders', self::CONFIG_KEY)['value'];
