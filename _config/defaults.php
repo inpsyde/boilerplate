@@ -19,6 +19,14 @@ $folders = [
  * Placeholder definitions.
  */
 $placeholders = [
+    'assets' => [
+        'name' => 'Project uses Assets',
+        'description' => 'The project needs to compile/bundle assets',
+        'validation' => function ($placeholder) {
+            return Validation::validateChoice($placeholder);
+        },
+        'default' => true,
+    ],
     'vendor' => [
         'name' => 'Vendor name',
         'description' => "Human readable vendor name (probably your company's name)",
@@ -119,7 +127,7 @@ $placeholders = [
             return Validation::validateEmail($placeholder);
         },
         'default' => 'hello@inpsyde.com',
-    ]
+    ],
     /**
      * Note: the 'year' parameter is declared in Task\DeclareDate
      */
