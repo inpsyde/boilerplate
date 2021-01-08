@@ -1,8 +1,8 @@
 {
-  "extends": "inpsyde",
-  "globals": {
-    "_": false,
-    "Backbone": false,
-    "jquery": false
-  }
+     "extends": "inpsyde",
+     "globals": {
+        "_": false,
+        "Backbone": false,
+        "jquery": false
+    }
 }
