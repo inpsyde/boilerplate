@@ -51,6 +51,7 @@ class Setup extends Scripts\Setup
             OriginTask\RemoveTemplatesFolder::class,
             OriginTask\RemoveOriginalVCSData::class,
             Task\InitGitRepo::class,
+            Task\RequireAssetPackages::class,
 
             // Removing the vendor folder also removes the autoloader,
             // so this task needs to run last.

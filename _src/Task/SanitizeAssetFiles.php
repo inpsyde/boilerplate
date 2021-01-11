@@ -51,9 +51,6 @@ class SanitizeAssetFiles extends Task\AbstractTask
         if ($useAssets === 'yes') {
             $fs->remove("{$baseDir}/assets");
 
-            $fs->remove("{$baseDir}/composer.json");
-            $fs->rename("{$baseDir}/composer.assets.json", "{$baseDir}/composer.json");
-
             switch ($type) {
                 case 'wordpress-theme':
                     $fs->remove("{$baseDir}/functions.php");
