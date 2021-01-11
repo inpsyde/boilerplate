@@ -17,8 +17,7 @@ class RequireAssetPackages extends Task\AbstractTask
         $baseDir = $this->getConfigKey('BaseDir');
 
         $command = sprintf(
-            'cd %1$s && composer require %2$s',
-            escapeshellarg($baseDir),
+            'composer require %1$s',
             implode(' ', self::PACKAGES)
         );
 
