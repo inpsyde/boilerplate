@@ -46,10 +46,12 @@ class Setup extends Scripts\Setup
             Task\SanitizePluginFile::class,
             Task\SanitizeThemeFiles::class,
             Task\SanitizeLibraryFiles::class,
+            Task\SanitizeAssetFiles::class,
             OriginTask\RemoveConfigFolder::class,
             OriginTask\RemoveTemplatesFolder::class,
             OriginTask\RemoveOriginalVCSData::class,
             Task\InitGitRepo::class,
+            Task\RequireAssetPackages::class,
 
             // Removing the vendor folder also removes the autoloader,
             // so this task needs to run last.

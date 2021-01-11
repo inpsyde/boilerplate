@@ -119,4 +119,30 @@ class Validation extends Scripts\Validation
             )
         );
     }
+
+    /**
+     * Verify that a string is a valid choice
+     *
+     * @since 0.1.0
+     *
+     * @param string $string The string to validate.
+     *
+     * @return string The validated string.
+     * @throws Exception\InvalidArgumentException If the string is quoted or double-quoted.
+     */
+    public static function validateChoice($string)
+    {
+        $choice = SetupHelper::getLowerCase($string);
+
+        if ($choice === 'yes' || $choice === 'no') {
+            return $choice;
+        }
+
+        throw new Exception\InvalidArgumentException(
+            sprintf(
+                'Provided choice "%1$s" is invalid.',
+                $string
+            )
+        );
+    }
 }

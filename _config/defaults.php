@@ -119,10 +119,18 @@ $placeholders = [
             return Validation::validateEmail($placeholder);
         },
         'default' => 'hello@inpsyde.com',
-    ]
+    ],
     /**
      * Note: the 'year' parameter is declared in Task\DeclareDate
      */
+    'assets' => [
+        'name' => 'Project uses Assets',
+        'description' => 'The project uses Assets and need the compile/bundle setup, otherwise (no)',
+        'validation' => function ($placeholder) {
+            return Validation::validateChoice($placeholder);
+        },
+        'default' => 'yes',
+    ],
 ];
 
 return [

@@ -1,0 +1,49 @@
+{
+    "name": "{{package_key}}",
+    "version": "0.0.1",
+    "description": "{{description}}",
+    "repository": "https://github.com/{{vendor_key}}/{{package_key}}",
+    "license": "{{license}}",
+    "author": "{{author}}",
+    "main": "assets/app.js",
+    "browserslist": [
+       "> 2%",
+       "last 4 versions"
+    ],
+    "prettier": {
+        "printWidth": 120,
+        "tabWidth": 4,
+        "semi": true,
+        "singleQuote": true
+    },
+    "eslintConfig": {
+        "env": {
+            "browser": true,
+            "node": true
+        }
+    },
+    "devDependencies": {
+        "@symfony/webpack-encore": "^0.33.0",
+        "@wordpress/dependency-extraction-webpack-plugin": "^2.8.0",
+        "autoprefixer": "^10.2.1",
+        "babel-eslint": "^10.0.1",
+        "eslint": "^7.17.0",
+        "eslint-config-inpsyde": "^2.2.0",
+        "eslint-loader": "^4.0.2",
+        "file-loader": "^6.2.0",
+        "fork-ts-checker-webpack-plugin": "6.1.0",
+        "node-sass": "^5.0.0",
+        "postcss": "^8.2.4",
+        "postcss-loader": "^4.1.0",
+        "prettier": "^2.1.2",
+        "sass": "^1.28.0",
+        "sass-loader": "^10.1.0",
+        "ts-loader": "8.0.14",
+        "typescript": "^4.1.3"
+    },
+    "scripts": {
+        "build": "encore production",
+        "watch": "encore dev --watch",
+        "prettier": "npx prettier ./resources ./*{.js,.json} --write"
+    }
+}

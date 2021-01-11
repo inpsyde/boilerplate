@@ -1,0 +1,30 @@
+const Encore = require('@symfony/webpack-encore');
+const DependencyExtractionWebpackPlugin = require('@wordpress/dependency-extraction-webpack-plugin');
+
+const isProduction = Encore.isProduction();
+
+Encore
+    .setOutputPath('assets/')
+
+    // When fonts, images or attachments are generated, they are stored in "assets/{img|font|..}/"
+    // And linked via "./" in CSS.
+    .setPublicPath('./')
+    .setManifestKeyPrefix('./')
+
+    .addEntry('app', './resources/js/app.js')
+    .addStyleEntry('style', './resources/scss/style.scss')
+
+    .enableTypeScriptLoader()
+    .enableSassLoader()
+
+    //.enableEslintLoader()
+
+    .enableForkedTypeScriptTypesChecking()
+    .enablePostCssLoader()
+    .enableSourceMaps(!isProduction)
+    .disableSingleRuntimeChunk()
+    .addPlugin(new DependencyExtractionWebpackPlugin())
+    .splitEntryChunks()
+    .cleanupOutputBeforeBuild(!isProduction ? ['*.js', '*.css'] : []);
+
+module.exports = Encore.getWebpackConfig();
