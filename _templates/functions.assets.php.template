@@ -10,6 +10,10 @@ declare( strict_types = 1 );
  */
 namespace {{namespace}};
 
+use Inpsyde\Assets\Asset;
+use Inpsyde\Assets\AssetManager;
+use Inpsyde\Assets\Loader\WebpackManifestLoader;
+
 /**
  * Register custom Assets for {{package}}
  */
